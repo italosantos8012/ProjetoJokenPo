@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>JokenPô</title>
+</head>
+
+<body>
+    <main class="container">
+        <div class="buttons">
+            <div class="box-button-reset">
+                <button class="button-reset" onclick="reset()"><img src="./assets/icon-reset.png" alt="reset"></button>
+            </div>
+            <div class="box-dark-mode">
+                <input type="checkbox" id="dark-mode" onclick="darkMode()">
+                <label for="dark-mode" id="ios-dark-mode"></label>
+            </div>
+        </div>
+        <header class="box-logo">
+            <img class="logo" src="./assets/logo.png" alt="logo">
+        </header>
+        <div class="border-img">
+            <p class="p-yours">
+                Você
+            </p>
+            <p class="p-machine">
+                Máquina
+            </p>
+            <section class="box-img">
+                <img class="img-left" src="./assets/rock-left.png" alt="gif-left">
+                <img class="img-right" src="./assets/rock-right.png" alt="gif-right">
+            </section>
+        </div>
+        <section class="paragraph">
+            <p id="result"></p>
+            <p class="yours-score">Sua pontuação: <br> <span id="yours-score">0</span></p>
+            <p class="machine-score">Pontuação da máquina: <br> <span id="machine-score">0</span></p>
+        </section>
+        <footer class="buttons-footer">
+            <button id="rock" onclick="playHuman('rock')">&#128074;</button>
+            <button id="paper" onclick="playHuman('paper')">&#128400;</button>
+            <button id="scissors" onclick="playHuman('scissors')">&#9996;</button>
+        </footer>
+    </main>
+</body>
+
+</html>
