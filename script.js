@@ -1,3 +1,13 @@
+const i = setInterval(function () {
+
+    clearInterval(i);
+
+    // O código desejado é apenas isto:
+    document.getElementById("loading").style.display = "none";
+    document.querySelector(".container").style.display = "flex";
+
+}, 4500);
+
 const playMachine = () => {
     const choices = ["rock", "paper", "scissors"]
     const ramdom = Math.floor(Math.random() * 3)
@@ -15,6 +25,9 @@ const playGame = (human, machine) => {
     const imgLeft = document.querySelector(".img-left")
     const imgRight = document.querySelector(".img-right")
     const gifContainer = document.querySelector(".box-img")
+    const audioDerrota = new Audio("./assets/som-derrrota.mp3")
+    const audioVitoria = new Audio("./assets/som-vitoria.mp3")
+    audioVitoria.volume = .25
 
     //EMPATE
     if (human === "paper" && machine === "paper") {
@@ -54,6 +67,7 @@ const playGame = (human, machine) => {
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/rock-left.png"
         imgRight.src = "./assets/paper-right.png"
+        audioDerrota.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
         }, 1100);
@@ -67,6 +81,7 @@ const playGame = (human, machine) => {
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/paper-left.png"
         imgRight.src = "./assets/scissors-right.png"
+        audioDerrota.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
         }, 1100);
@@ -79,6 +94,7 @@ const playGame = (human, machine) => {
         gifContainer.style.visibility = "visible";
         imgRight.src = "./assets/rock-right.png"
         imgLeft.src = "./assets/scissors-left.png"
+        audioDerrota.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
         }, 1100);
@@ -92,6 +108,7 @@ const playGame = (human, machine) => {
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/paper-left.png"
         imgRight.src = "./assets/rock-right.png"
+        audioVitoria.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
         }, 1100);
@@ -103,6 +120,7 @@ const playGame = (human, machine) => {
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/scissors-left.png"
         imgRight.src = "./assets/paper-right.png"
+        audioVitoria.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
         }, 1100);
@@ -114,6 +132,7 @@ const playGame = (human, machine) => {
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/rock-left.png"
         imgRight.src = "./assets/scissors-right.png"
+        audioVitoria.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
         }, 1100);

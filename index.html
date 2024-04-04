@@ -11,12 +11,22 @@
 </head>
 
 <body>
+    <div id="loading">
+        <h1>Divirta-se</h1>
+        <img src="./assets/gif-jokenpo.gif" style="border-radius: 45%;" />
+    </div>
     <main class="container">
         <div class="buttons">
             <div class="box-button-reset">
+                <p style="font-size: 0.6rem;">Reset</p>
                 <button class="button-reset" onclick="reset()"><img src="./assets/icon-reset.png" alt="reset"></button>
+
+            </div>
+            <div>
+                <p style="font-size: 0.7rem; font-weight:400; margin-top:5px">Projeto JokenPo v1.1</p>
             </div>
             <div class="box-dark-mode">
+                <p style="font-size: 0.6rem;">Dark</p>
                 <input type="checkbox" id="dark-mode" onclick="darkMode()">
                 <label for="dark-mode" id="ios-dark-mode"></label>
             </div>
@@ -38,14 +48,16 @@
         </div>
         <section class="paragraph">
             <p id="result"></p>
-            <p class="yours-score">Sua pontuação: <br> <span id="yours-score">0</span></p>
-            <p class="machine-score">Pontuação da máquina: <br> <span id="machine-score">0</span></p>
+            <p class="yours-score">Sua pontuação: <span id="yours-score">0</span></p>
+            <p class="machine-score">Pontuação da máquina: <span id="machine-score">0</span></p>
         </section>
         <footer class="buttons-footer">
+            <h4 style="margin-bottom: 5px;">Clique e teste sua sorte</h4>
             <button id="rock" onclick="playHuman('rock')">&#128074;</button>
             <button id="paper" onclick="playHuman('paper')">&#128400;</button>
             <button id="scissors" onclick="playHuman('scissors')">&#9996;</button>
         </footer>
+        <p style="font-size: 0.7rem; font-weight:400; margin-top:5px">Deselvolvido por Ítalo Santos ©</p>
     </main>
 </body>
 
