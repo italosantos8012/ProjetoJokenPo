@@ -2,11 +2,24 @@ const i = setInterval(function () {
 
     clearInterval(i);
 
-    // O código desejado é apenas isto:
     document.getElementById("loading").style.display = "none";
-    document.querySelector(".container").style.display = "flex";
-
+    document.querySelector(".container-user-name").style.display = "flex";
 }, 4500);
+
+const buttonUserName = document.querySelector(".button-user-name")
+
+function userName() {
+
+    let inputUserName = document.querySelector(".input-user-name").value
+    inputUserName = inputUserName.toUpperCase()
+    const name = document.querySelector(".name")
+    const pYours = document.querySelector(".p-yours")
+
+    name.innerHTML = inputUserName
+    pYours.innerHTML = inputUserName
+    document.querySelector(".container-user-name").style.display = "none"
+    document.querySelector(".container").style.display = "flex";
+}
 
 const playMachine = () => {
     const choices = ["rock", "paper", "scissors"]
@@ -146,8 +159,10 @@ const playHuman = (human) => {
 function darkMode() {
     const body = document.querySelector('body');
     const container = document.querySelector(".container")
+    const nameDark = document.querySelector(".name")
     body.classList.toggle('dark-mode');
     container.classList.toggle("cont-dark")
+    nameDark.classList.toggle("name-dark")
 }
 
 function reset() {

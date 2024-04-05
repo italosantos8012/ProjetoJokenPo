@@ -15,6 +15,12 @@
         <h1>Divirta-se</h1>
         <img src="./assets/gif-jokenpo.gif" style="border-radius: 45%;" />
     </div>
+    <div class="container-user-name">
+        <h1>Me diga seu nome:</h1>
+        <label><input class="input-user-name" type="text" id="user-name"
+                placeholder="Digite seu nome ou apelido"></label>
+        <button class="button-user-name" onclick="userName()">INICIAR</button>
+    </div>
     <main class="container">
         <div class="buttons">
             <div class="box-button-reset">
@@ -36,7 +42,7 @@
         </header>
         <div class="border-img">
             <p class="p-yours">
-                Você
+
             </p>
             <p class="p-machine">
                 Máquina
@@ -48,11 +54,11 @@
         </div>
         <section class="paragraph">
             <p id="result"></p>
-            <p class="yours-score">Sua pontuação: <span id="yours-score">0</span></p>
+            <p class="yours-score">Pontuação de <span class="name"></span> : <span id="yours-score">0</span></p>
             <p class="machine-score">Pontuação da máquina: <span id="machine-score">0</span></p>
         </section>
         <footer class="buttons-footer">
-            <h4 style="margin-bottom: 5px;">Clique e teste sua sorte</h4>
+            <h4 style="margin-bottom: 5px; font-size: .8rem;">Clique e teste sua sorte</h4>
             <button id="rock" onclick="playHuman('rock')">&#128074;</button>
             <button id="paper" onclick="playHuman('paper')">&#128400;</button>
             <button id="scissors" onclick="playHuman('scissors')">&#9996;</button>
