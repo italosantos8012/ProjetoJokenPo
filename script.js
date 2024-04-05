@@ -32,6 +32,8 @@ let machineScoreNumber = 0
 let yoursScoreNumber = 0
 
 const playGame = (human, machine) => {
+    let inputUserName = document.querySelector(".input-user-name").value
+    inputUserName = inputUserName.toUpperCase()
     const result = document.querySelector("#result")
     const machineScore = document.querySelector("#machine-score")
     const yoursScore = document.querySelector("#yours-score")
