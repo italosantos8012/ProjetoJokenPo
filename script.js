@@ -76,7 +76,7 @@ const playGame = (human, machine) => {
     else if (human === "rock" && machine === "paper") {
         machineScoreNumber++
         machineScore.innerHTML = machineScoreNumber
-        result.innerHTML = '"A máquina ganhou"'
+        result.innerHTML = '"Jorginho ganhou"'
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/rock-left.png"
         imgRight.src = "./assets/paper-right.png"
@@ -90,7 +90,7 @@ const playGame = (human, machine) => {
         human === "paper" && machine === "scissors") {
         machineScoreNumber++
         machineScore.innerHTML = machineScoreNumber
-        result.innerHTML = '"A máquina ganhou"'
+        result.innerHTML = '"Jorginho ganhou"'
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/paper-left.png"
         imgRight.src = "./assets/scissors-right.png"
@@ -103,7 +103,7 @@ const playGame = (human, machine) => {
     else if (human === "scissors" && machine === "rock") {
         machineScoreNumber++
         machineScore.innerHTML = machineScoreNumber
-        result.innerHTML = '"A máquina ganhou"'
+        result.innerHTML = '"Jorginho ganhou"'
         gifContainer.style.visibility = "visible";
         imgRight.src = "./assets/rock-right.png"
         imgLeft.src = "./assets/scissors-left.png"
@@ -117,7 +117,7 @@ const playGame = (human, machine) => {
     else if (human === "paper" && machine === "rock") {
         yoursScoreNumber++
         yoursScore.innerHTML = yoursScoreNumber
-        result.innerHTML = '"Você ganhou"'
+        result.innerHTML = `"${inputUserName} ganhou"`
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/paper-left.png"
         imgRight.src = "./assets/rock-right.png"
@@ -129,7 +129,7 @@ const playGame = (human, machine) => {
     else if (human === "scissors" && machine === "paper") {
         yoursScoreNumber++
         yoursScore.innerHTML = yoursScoreNumber
-        result.innerHTML = '"Você ganhou"'
+        result.innerHTML = `"${inputUserName} ganhou"` 
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/scissors-left.png"
         imgRight.src = "./assets/paper-right.png"
@@ -141,7 +141,7 @@ const playGame = (human, machine) => {
     else if (human === "rock" && machine === "scissors") {
         yoursScoreNumber++
         yoursScore.innerHTML = yoursScoreNumber
-        result.innerHTML = '"Você ganhou"'
+        result.innerHTML = `"${inputUserName} ganhou"`
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/rock-left.png"
         imgRight.src = "./assets/scissors-right.png"
