@@ -1,4 +1,4 @@
-<h1 align="center">JokenPô</h1>
+<h1 align="center">JokenPô v1.2</h1>
 
 <p align="center">
  Projeto desenvolvido junto a formação <a target="_blank" href="https://rodolfomori.com.br/devclub/">DevClub</a>.
@@ -6,7 +6,7 @@
 
 <div align="center">
 
-<img src="./assets/reademe.png" alt="###" height="600px">
+<img src="./assets/reademe.png" alt="###" max-height="600px">
 
 </div>
 
@@ -22,7 +22,8 @@ Projeto desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Nesse jogo simples de pedra, papel e tesoura, consegui evoluir minha lógica usando Match.ramdom para sortear a escolha da máquina e tambem melhorar meu CSS, codando um botão para zerar o placar e outro para deixar em modo escuro
+Nesse jogo simples de pedra, papel e tesoura, consegui evoluir minha lógica usando Math.ramdom para sortear a escolha da máquina e tambem melhorar meu CSS, codando um botão para zerar o placar e outro para deixar em modo escuro. 
+Na versão 1.2 implementei uma tela de loading, uma tela que solicita o nome do usuário e uma tela que exibe o que cada um escolheu no jogo.
 
 ## 🌐 Deploy
 
