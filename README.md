@@ -22,7 +22,7 @@ Projeto desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Nesse jogo simples de pedra, papel e tesoura, consegui evoluir minha lógica usando Math.ramdom para sortear a escolha da máquina e tambem melhorar meu CSS, codando um botão para zerar o placar e outro para deixar em modo escuro. 
+Nesse jogo simples de pedra, papel e tesoura, consegui evoluir minha lógica usando Math.ramdom para sortear a escolha da máquina e tambem melhorar meu CSS e JS, codando um botão para zerar o placar e outro para deixar em modo escuro.<br>
 Na versão 1.2 implementei uma tela de loading, uma tela que solicita o nome do usuário e uma tela que exibe o que cada um escolheu no jogo.
 
 ## 🌐 Deploy
