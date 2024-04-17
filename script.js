@@ -9,16 +9,19 @@ const i = setInterval(function () {
 const buttonUserName = document.querySelector(".button-user-name")
 
 function userName() {
-
     let inputUserName = document.querySelector(".input-user-name").value
     inputUserName = inputUserName.toUpperCase()
     const name = document.querySelector(".name")
     const pYours = document.querySelector(".p-yours")
 
-    name.innerHTML = inputUserName
-    pYours.innerHTML = inputUserName
-    document.querySelector(".container-user-name").style.display = "none"
-    document.querySelector(".container").style.display = "flex";
+    if (inputUserName === "") {
+        alert("Digite algo")
+    } else {
+        name.innerHTML = inputUserName
+        pYours.innerHTML = inputUserName
+        document.querySelector(".container-user-name").style.display = "none"
+        document.querySelector(".container").style.display = "flex";
+    }
 }
 
 const playMachine = () => {
@@ -44,6 +47,13 @@ const playGame = (human, machine) => {
     const audioVitoria = new Audio("./assets/som-vitoria.mp3")
     audioVitoria.volume = .25
 
+    const btnRock = document.getElementById("rock")
+    const btnPaper = document.getElementById("paper")
+    const btnScissors = document.getElementById("scissors")
+    btnRock.disabled = true
+    btnPaper.disabled = true
+    btnScissors.disabled = true
+
     //EMPATE
     if (human === "paper" && machine === "paper") {
         result.innerHTML = '"Empatou"'
@@ -52,7 +62,10 @@ const playGame = (human, machine) => {
         imgRight.src = "./assets/paper-right.png"
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
 
     if (human === "rock" && machine === "rock") {
@@ -62,7 +75,10 @@ const playGame = (human, machine) => {
         imgRight.src = "./assets/rock-right.png"
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
     if (human === "scissors" && machine === "scissors") {
         result.innerHTML = '"Empatou"'
@@ -71,7 +87,10 @@ const playGame = (human, machine) => {
         imgRight.src = "./assets/scissors-right.png"
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
 
     //MAQUINA GANHA
@@ -85,7 +104,10 @@ const playGame = (human, machine) => {
         audioDerrota.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
 
     else if (
@@ -99,7 +121,10 @@ const playGame = (human, machine) => {
         audioDerrota.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
 
     else if (human === "scissors" && machine === "rock") {
@@ -112,7 +137,10 @@ const playGame = (human, machine) => {
         audioDerrota.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
 
     //HUMANO GANHA
@@ -126,19 +154,25 @@ const playGame = (human, machine) => {
         audioVitoria.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
     else if (human === "scissors" && machine === "paper") {
         yoursScoreNumber++
         yoursScore.innerHTML = yoursScoreNumber
-        result.innerHTML = `"${inputUserName} ganhou"` 
+        result.innerHTML = `"${inputUserName} ganhou"`
         gifContainer.style.visibility = "visible";
         imgLeft.src = "./assets/scissors-left.png"
         imgRight.src = "./assets/paper-right.png"
         audioVitoria.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
     else if (human === "rock" && machine === "scissors") {
         yoursScoreNumber++
@@ -150,7 +184,10 @@ const playGame = (human, machine) => {
         audioVitoria.play()
         setTimeout(() => {
             gifContainer.style.visibility = "hidden";
-        }, 1100);
+            btnRock.disabled = false
+            btnPaper.disabled = false
+            btnScissors.disabled = false
+        }, 1200);
     }
 }
 
